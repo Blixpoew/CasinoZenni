@@ -20,18 +20,30 @@ flipBtn.addEventListener("click", () => {
         tails++;
     }
     setTimeout(updateStats, 3000);
-    disableButton();
+    disableButton()
+	setTimeout(fxConfetti, 3000);
 });
 function updateStats(){
     document.querySelector("#heads-count").textContent = `Caras: ${heads}`;
     document.querySelector("#tails-count").textContent = `Culos: ${tails}`;
 }
+
+
 function disableButton(){
     flipBtn.disabled = true;
     setTimeout(function(){
         flipBtn.disabled = false;
     },3000);
 }
+
+function fxConfetti(){
+	confetti({
+		particleCount: 100,
+		spread: 70,
+		origin: {y: 0.6}
+	})
+}
+
 resetBtn.addEventListener("click",() => {
     coin.style.animation = "none";
     heads = 0;
