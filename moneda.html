@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+    <title>Moneda</title>
     <!--Google Fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
     <!--Stylesheet-->
@@ -31,10 +31,36 @@
 			</li>
 		</ul>
 	</div>
-	<!--Inicio-->
+	<!--Moneda-->
     <div class="container">
-        <img src="portada.jpg" width="100%" height="100%">
+        <div class="stats">
+            <p id="heads-count">Caras: 0</p>
+            <p id="tails-count">Culos: 0</p>
+        </div>
+        <div class="coin" id="coin">
+            <div class="heads">
+                <img src="heads.svg">
+            </div>
+            <div class="tails">
+                <img src="tails.svg">
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="flip-button">
+                <span class="text">Girar</span>
+				<div class="emotes">
+					<a>💰</a>
+					<a>🤑</a>
+					<a>💸</a>
+				</div>
+            </button>
+			<button id="reset-button">
+                Reset
+            </button>
+        </div>
     </div>
     <!--Script-->
+	<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="scriptMoneda.js"></script>
 </body>
 </html>
