@@ -8,15 +8,19 @@ let dice = document.querySelectorAll("img");
 let flipBtn = document.querySelector(".rollDice");
 
 function roll(){
+	var interval = setInterval(function(){
+			let random= Math.floor(Math.random()*6);
+			document.querySelector("#die-1").setAttribute("src", images[random])
+		},500);
     dice.forEach(function(die){
         die.classList.add("shake");
     });
     setTimeout(function(){
         dice.forEach(function(die){
             die.classList.remove("shake");
+			clearInterval(interval);
         });
         let dieOneValue = Math.floor(Math.random()*6);
-        console.log(dieOneValue);
         document.querySelector("#die-1").setAttribute("src", images[dieOneValue]);
         document.querySelector("#total").innerHTML = "Resultado: " + ( (dieOneValue +1) );
     },

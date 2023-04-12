@@ -32,11 +32,47 @@
 		</ul>
 	</div>
 	<!--Moneda-->
-    <div class="container">
-        <h1>PROXIMAMENTE</h1>
+    <div class="wrapper">
+      <div id="containerSpin" style="display: none;">
+        <canvas id="wheel"></canvas>
+        <button id="spin-btn">GIRAR</button>
+        <img id="hand" src="spinner-arrow-.svg"/>
+      </div>
+      <div id="final-value">
+        <p>🍆Inserta los nombres pelotudo 🥱</p>
+      </div>	
     </div>
+	<div class="participants">
+		<h2>Participantes</h2>
+			<div class="values">
+				<label>1:</label>
+				<input onClick="this.select();" type="text" id="value1" name="value1" value="Nombre 1">
+				<br>
+				<label>2:</label>
+				<input onClick="this.select();" type="text" id="value2" name="value2" value="Nombre 2">
+				<br>
+				<label>3:</label>
+				<input onClick="this.select();" type="text" id="value3" name="value3" value="Nombre 3">
+				<br>
+				<label>4:</label>
+				<input onClick="this.select();" type="text" id="value4" name="value4" value="Nombre 4">
+				<br>
+				<label>5:</label>
+				<input onClick="this.select();" type="text" id="value5" name="value5" value="Nombre 5">
+				<br>
+				<label>6:</label>
+				<input onClick="this.select();" type="text" id="value6" name="value6" value="Nombre 6">
+			</div>
+		<button class="rollDice" onclick="getValues()">Guardar</button>
+		<button onclick="location.reload()">Reset</button>
+		</div>
+	<footer><h3>Powered by Blixpoew</h3></footer>
+    <!-- Chart JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <!-- Chart JS Plugin for displaying text over chart -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.1.0/chartjs-plugin-datalabels.min.js"></script>
     <!--Script-->
 	<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
-    <script src="script.js"></script>
+    <script src="scriptRuleta.js"></script>
 </body>
 </html>
